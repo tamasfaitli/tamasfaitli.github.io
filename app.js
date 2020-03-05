@@ -1,32 +1,45 @@
-const construction_element = document.querySelector(".c_construction");
-const construction_text = construction_element.textContent;
+function change_text(text) {
 
-const split_text = construction_text.split("");
-
-construction_element.textContent = "";
-
-for(let i=0; i<split_text.length; i++)
-{
-	construction_element.innerHTML += "<span>"+split_text[i]+"</splan>";
 }
 
-let char = 0;
-let timer = setInterval(onTick, 45);
+var app = new Vue({
+    el: '#app',
+    data: {
+        rotating_welcome_text_counter: 0,
+        rotating_welcome_text_list: ["scroll down!", "check my work!", "contact me!"],
+        rotating_welcome_text: 'scroll down!'
+    },
+    methods: {
+        changeText: function() {
+            this.rotating_welcome_text_counter += 1;
+            this.rotating_welcome_text = this.rotating_welcome_text_list[this.rotating_welcome_text_counter % this.rotating_welcome_text_list.length];
+        }
+    }
+})
 
-function onTick()
-{
-	const span = construction_element.querySelectorAll('span')[char];
-	span.classList.add('fade');
-	char++;
-	if(char == split_text.length)
-	{
-		complete();
-		return;
-	}
+setInterval(rotating_welcome_text_timer, 2300);
+
+
+function rotating_welcome_text_timer() {
+    var d = new Date();
+    app.changeText();
+
+    var rotating_welcome_text_baffle = baffle(".baffle-anim");
+
+    rotating_welcome_text_baffle.text(currentText => app.rotating_welcome_text);
+
+    rotating_welcome_text_baffle.set({
+        characters: '▒█/▓ ░█<░ ▒░▓ ▒█/▒ ░████ >>▒ █<▒<░ ▒>░█▒ ███',
+        speed: 60
+    });
+
+    rotating_welcome_text_baffle.start();
+    rotating_welcome_text_baffle.reveal(1100);
+
 }
 
-function complete()
-{
-	clearInterval(timer);
-	timer = null;
-}
+
+
+// scroll down!
+// check my work!
+// contact me!

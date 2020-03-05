@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="it=edge">
-	<link rel="stylesheet" href="./style.css">
-	<title>Tamas's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="it=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Tamas's Portfolio</title>
 
 </head>
-<body>
 
-<h1 class="c_construction">Under construction</h1>
-<script src="./app.js"></script>
+<body>
+    <div class="nav-bar">
+        <a href="#">
+            <p id="logo">TF</p>
+        </a>
+        <div class="menu-bar">
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Interests</a>
+            <a href="#">Research</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div id="app">
+        <div id="div-welcome-text">
+            <p class="normal-medium">Hi!</p>
+            <p>I am <span class="yellow-regular">Tamás</span>,</p>
+            <p class="baffle-anim" v-on:click="changeText">{{rotating_welcome_text}}</p>
+        </div>
+        <div id="cv-photo"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+
 </body>
+
 </html>
