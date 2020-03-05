@@ -25,12 +25,14 @@
     </div>
 
     <div id="app">
-        <div id="div-welcome-text">
+        <div id="div-welcome-text" class="left-column">
             <p class="normal-medium">Hi!</p>
             <p>I am <span class="yellow-regular">Tamás</span>,</p>
-            <p class="baffle-anim" v-on:click="changeText">{{rotating_welcome_text}}</p>
+            <p v-on:click="changeText"><span id="baffle1" class="normal-medium">{{rotating_welcome_text1}}</span><span id="baffle2">{{rotating_welcome_text2}}</span></p>
         </div>
-        <div id="cv-photo"></div>
+        <div class="right-column">
+            <img id="cv-photo" src="res/Cvimage.jpeg" alt="">
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

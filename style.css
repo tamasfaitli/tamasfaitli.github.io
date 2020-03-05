@@ -2,11 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background: #FFFEF2;
-    color: #2A2600;
+    font-family: Oxanium;
 }
 
 a:link,
@@ -38,7 +34,6 @@ a:active {
     top: 0%;
     bottom: 0%;
     right: 10px;
-    font-family: Oxanium;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
@@ -69,7 +64,6 @@ a:active {
     height: 65px;
     left: 10px;
     top: 0px;
-    font-family: Oxanium;
     font-style: normal;
     font-weight: 500;
     font-size: 58px;
@@ -82,35 +76,39 @@ a:active {
 }
 
 #div-welcome-text {
-    font-weight: 300;
+    padding-top: 2%;
+    padding-left: 26%;
+    font-weight: 100;
     font-size: 58px;
+    text-align: left;
     line-height: 72px;
     position: relative;
+    width: 50%;
+}
+
+#app {
+    position: absolute;
     top: 65px;
+    padding-top: 10%;
+    width: 100%;
 }
 
 #cv-photo {
-    position: absolute;
-    width: 278px;
-    height: 335px;
-    left: 927px;
-    top: 200px;
-    box-shadow: 0px 4px 6px #151300;
-    background: url(res/Cvimage.jpeg);
+    height: 40ex;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-50%, -9%);
+    border-radius: 150px 90px 150px 90px;
+    box-shadow: #2A2600;
 }
 
-p.typewriter-anim {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 4px solid black;
-    animation: type 2s steps(20);
+.left-column {
+    float: left;
+    width: 50%;
 }
 
-@keyframes type {
-    0% {
-        width: 0ch;
-    }
-    100% {
-        width: 20ch;
-    }
+.right-column {
+    float: right;
+    width: 50%;
 }
