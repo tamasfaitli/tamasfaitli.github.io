@@ -6,6 +6,7 @@ var app = new Vue({
         rotating_welcome_text2_list: [" down!", " my work!", " me!"],
         rotating_welcome_text1: "scroll",
         rotating_welcome_text2: " down!",
+        weights: []
     },
     methods: {
         changeText: function() {
@@ -15,6 +16,26 @@ var app = new Vue({
         }
     }
 })
+
+
+// initialize stuff
+window.onload = function() {
+    initFontCheckerList();
+}
+
+var test = document.querySelectorAll(".test *");
+
+
+//initFontCheckerList
+function initFontCheckerList() {
+    for (i = 0; i < 10; i++) {
+        app.weights.push("Text " + String((i + 1) * 10));
+    }
+    console.log(document.getElementsByTagName("li"));
+
+    console.log(document.getElementsByTagName("div"));
+}
+
 
 setInterval(rotating_welcome_text_timer, 2300);
 

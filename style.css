@@ -1,8 +1,14 @@
+@font-face {
+    font-family: "locOxanium";
+    src: url("fonts/Oxanium-Light.ttf"), url("fonts/Oxanium-ExtraLight.ttf"), url("fonts/Oxanium-Medium.ttf.ttf"), url("fonts/Oxanium-Regular.ttf.ttf"), url("fonts/Oxanium-Bold.ttf.ttf.ttf"), url("fonts/Oxanium-SemiBold.ttf.ttf"), url("fonts/Oxanium-ExtraBold.ttf.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Oxanium;
+    font-family: Oxanium, "locOxanium", "Oxanium-ExtraLight";
+    /*   font-family: Oxanium, "locOxanium", cursive;*/
 }
 
 a:link,
@@ -21,7 +27,8 @@ a:active {
 }
 
 .nav-bar {
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     width: 100%;
     height: 65px;
     left: 0px;
@@ -35,7 +42,7 @@ a:active {
     bottom: 0%;
     right: 10px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 26px;
     line-height: 32px;
     display: flex;
@@ -54,7 +61,7 @@ a:active {
 }
 
 .yellow-regular {
-    font-weight: normal;
+    font-weight: 500;
     color: #F2C12E;
 }
 
@@ -111,4 +118,13 @@ a:active {
 .right-column {
     float: right;
     width: 50%;
+}
+
+.test {
+    top: 2000px;
+    left: 200px;
+}
+
+.big-place-to-scroll {
+    height: 3000px;
 }
