@@ -1,3 +1,17 @@
+let number_of_bckg_shapes = 10;
+
+var nav_bar = new Vue({
+    el: '#nav-bar',
+    data: {
+        logo_res: "res/logo.svg"
+    },
+    methods: {
+        changeImageSrc: function() {
+            this.logo_res = "res/logo-hovered.svg"
+        }
+    }
+})
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -6,13 +20,17 @@ var app = new Vue({
         rotating_welcome_text2_list: [" down!", " my work!", " me!"],
         rotating_welcome_text1: "scroll",
         rotating_welcome_text2: " down!",
-        weights: []
+        weights: [],
+        background_shapes: []
     },
     methods: {
         changeText: function() {
             this.rotating_welcome_text_counter += 1;
             this.rotating_welcome_text1 = this.rotating_welcome_text1_list[this.rotating_welcome_text_counter % this.rotating_welcome_text1_list.length];
             this.rotating_welcome_text2 = this.rotating_welcome_text2_list[this.rotating_welcome_text_counter % this.rotating_welcome_text2_list.length];
+        },
+        changeFontWeight: function() {
+
         }
     }
 })
@@ -21,19 +39,27 @@ var app = new Vue({
 // initialize stuff
 window.onload = function() {
     initFontCheckerList();
+    initBackgroundShapes();
 }
-
-var test = document.querySelectorAll(".test *");
-
 
 //initFontCheckerList
 function initFontCheckerList() {
     for (i = 0; i < 10; i++) {
-        app.weights.push("Text " + String((i + 1) * 10));
-    }
-    console.log(document.getElementsByTagName("li"));
+        var weight = {
+            text: "Text " + String((i + 1) * 10),
+            fontweight: ((i + 1) * 100)
+        };
 
-    console.log(document.getElementsByTagName("div"));
+        app.weights.push(weight);
+    }
+}
+
+function initBackgroundShapes() {
+    for (i = 0; i < number_of_bckg_shapes; i++) {
+        var bckg_shape = {
+
+        };
+    }
 }
 
 

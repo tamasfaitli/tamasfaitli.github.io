@@ -7,8 +7,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Oxanium, "locOxanium", "Oxanium-ExtraLight";
+    font-family: "Oxanium", "Chakra Petch", "Helvetica Neue";
     /*   font-family: Oxanium, "locOxanium", cursive;*/
+    background-color: #eeeeee;
 }
 
 a:link,
@@ -26,13 +27,8 @@ a:active {
     color: #fffce5;
 }
 
-.nav-bar {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 65px;
-    left: 0px;
-    top: 0px;
+#nav-bar,
+#nav-bar * {
     background-color: #FFEB3B;
 }
 
@@ -52,6 +48,15 @@ a:active {
     padding-right: 5px;
 }
 
+#nav-bar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 65px;
+    left: 0px;
+    top: 0px;
+}
+
 .menu-bar a {
     padding-left: 20px;
 }
@@ -62,7 +67,7 @@ a:active {
 
 .yellow-regular {
     font-weight: 500;
-    color: #F2C12E;
+    color: #cda300;
 }
 
 #logo {
@@ -83,21 +88,20 @@ a:active {
 }
 
 #div-welcome-text {
-    padding-top: 2%;
-    padding-left: 26%;
+    padding-left: 25%;
+    padding-top: 3%;
     font-weight: 100;
     font-size: 58px;
     text-align: left;
     line-height: 72px;
     position: relative;
-    width: 50%;
 }
 
 #app {
     position: absolute;
     top: 65px;
-    padding-top: 10%;
     width: 100%;
+    height: 100%;
 }
 
 #cv-photo {
@@ -105,26 +109,42 @@ a:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    transform: translate(-50%, -9%);
+    transform: translate(-90%, -5%);
     border-radius: 150px 90px 150px 90px;
     box-shadow: 0px 4px 6px #151300;
 }
 
-.left-column {
+.left-60-column {
     float: left;
-    width: 50%;
+    width: 60%;
 }
 
 .right-column {
     float: right;
-    width: 50%;
+    width: 40%;
 }
 
 .test {
-    top: 2000px;
-    left: 200px;
+    vertical-align: bottom;
+    position: relative;
+    top: 50px;
+    margin-top: 200px;
+    margin-left: 200px;
+    font-size: 58px;
 }
 
 .big-place-to-scroll {
     height: 3000px;
+}
+
+#about-section {
+    position: relative;
+    height: 100%;
+    padding-top: 10%;
+}
+
+#projects-section {
+    background-color: #464646;
+    position: relative;
+    height: 100%;
 }
