@@ -25,22 +25,42 @@
     </div>
 
     <div id="app">
-        <div id="background-anim">
-            <svg v-for="bs in background_shapes" :width="bs.width" :height="bs.height" :viewBox="bs.viewBox" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path :id="bs.id" :d="bs.d" fill="#FFEB3B" stroke="#2A2600"/>
-			</svg>
-        </div>
-
 
         <div id="about-section">
-            <div id="div-welcome-text" class="left-60-column">
-                <p class="normal-medium">Hi!</p>
-                <p>I am <span class="yellow-regular">Tamás</span>,</p>
-                <p v-on:click="changeText"><span id="baffle1" class="normal-medium">{{rotating_welcome_text1}}</span><span id="baffle2">{{rotating_welcome_text2}}</span></p>
+            <div id="text-image-row">
+                <div id="div-welcome-text" class="left-60-column">
+                    <p class="normal-medium">Hi!</p>
+                    <p>I am <span class="yellow-regular">Tamás</span>,</p>
+                    <p v-on:click="changeText"><span id="baffle1" class="normal-medium">{{rotating_welcome_text1}}</span><span id="baffle2">{{rotating_welcome_text2}}</span></p>
+                </div>
+                <div class="right-column">
+                    <img id="cv-photo" src="res/Cvimage.jpeg" alt="">
+                </div>
             </div>
-            <div class="right-column">
-                <img id="cv-photo" src="res/Cvimage.jpeg" alt="">
+
+            <div id="div-sm-icons">
+                <div id="sm-icons-row"></div>
             </div>
+
+            <div class="bottom-center">
+                <svg id="down-arrow" width="227" height="53" viewBox="0 0 227 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g id="down-arrow" filter="url(#filter0_d)">
+				<path d="M111 48L0.148747 -2.0881e-05L221.851 -1.49919e-06L111 48Z" fill="#151300"/>
+				</g>
+				<defs>
+				<filter id="filter0_d" x="0.148743" y="0" width="226.703" height="53" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+				<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+				<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+				<feOffset dx="4" dy="4"/>
+				<feGaussianBlur stdDeviation="0.5"/>
+				<feColorMatrix type="matrix" values="0 0 0 0 0.654902 0 0 0 0 0.588235 0 0 0 0 0 0 0 0 0.6 0"/>
+				<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+				<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+				</filter>
+				</defs>
+				</svg>
+            </div>
+
         </div>
 
         <div id="projects-section"></div>
@@ -61,9 +81,13 @@
 
     </div>
 
+    <div id="footer-section">
+        Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+    <script src="./app.js"></script>
 
 </body>
 

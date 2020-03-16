@@ -1,17 +1,5 @@
 let number_of_bckg_shapes = 10;
 
-var nav_bar = new Vue({
-    el: '#nav-bar',
-    data: {
-        logo_res: "res/logo.svg"
-    },
-    methods: {
-        changeImageSrc: function() {
-            this.logo_res = "res/logo-hovered.svg"
-        }
-    }
-})
-
 var app = new Vue({
     el: '#app',
     data: {
@@ -21,7 +9,7 @@ var app = new Vue({
         rotating_welcome_text1: "scroll",
         rotating_welcome_text2: " down!",
         weights: [],
-        background_shapes: []
+        background_shapes: [],
     },
     methods: {
         changeText: function() {
@@ -55,10 +43,18 @@ function initFontCheckerList() {
 }
 
 function initBackgroundShapes() {
+    //Math.random() generated a number within 0-1
     for (i = 0; i < number_of_bckg_shapes; i++) {
+        var w = String(Math.random() * 1000);
+        var h = String(Math.random() * 1000);
         var bckg_shape = {
-
+            id: String(i),
+            width: w,
+            height: h,
+            viewBox: "0 0 " + w + " " + h,
+            d: "M182 1L1 207.5L182 76.5L378.5 43L182 1Z"
         };
+        app.background_shapes.push(bckg_shape);
     }
 }
 
